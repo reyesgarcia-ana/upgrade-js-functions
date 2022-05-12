@@ -56,11 +56,32 @@ function sumAll(param) {
     
     sumNumbers = param[i] + total;
     total = sumNumbers;
-
   }
 
   console.log(total);
-  console.log(param.length);
 }
 
 sumAll(numbers);
+
+
+// Iteración #4: Calcular el promedio ----------------
+
+const numbers2 = [12, 21, 38, 5, 45, 37, 6];
+
+function average(param) {
+  
+  let total = 0;
+
+  for (i=0; i<(param.length); i++) {
+    
+    sumNumbers = param[i] + total;
+    total = sumNumbers;
+  }
+
+  let calculatedAverage = (total/(param.length)).toFixed(2);
+  console.log(`La media es ${calculatedAverage}`);
+
+}
+
+average(numbers2);
+
