@@ -85,3 +85,42 @@ function average(param) {
 
 average(numbers2);
 
+// Iteración #5: Calcular promedio de strings -------------------------------
+//Crea una función que reciba por parámetro un array y cuando es un valor number lo sume 
+//y de lo contrario cuente la longitud del string y lo sume.
+
+const mixedElements = [ 1, 'Rayo', 8,'vallecano', '10', 9, 'upgrade','hub'];
+
+function averageWord(param) {
+  
+  let stringLength;
+  let totalStrings = 0;
+  let totalNumbers = 0;
+  
+  for (i=0; i<(param.length); i++) {
+    
+    
+    if (typeof param[i] === 'string') {
+
+      stringLength = param[i].length;
+      sumTotal = stringLength + totalStrings;
+      totalStrings = sumTotal;
+    
+    };
+
+    if (typeof param[i] === 'number') {
+
+      sumNumbers = param[i] + totalNumbers;
+      totalNumbers = sumNumbers;
+
+    }
+
+  }
+
+  result = sumNumbers + totalStrings;
+  console.log("La suma total es:", result);
+
+}
+
+averageWord(mixedElements);
+
