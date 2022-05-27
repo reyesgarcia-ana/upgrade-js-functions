@@ -153,20 +153,56 @@ function removeDuplicates(param) {
     if (noDuplicates.indexOf(param[i]) === -1) {
 
       noDuplicates.push(param[i]);
-
     } 
 
     else {
 
       console.log(param[i], `es un elemento duplicado, se eliminará y no se añade al nuevo array`);
-      
     }
 
   };
 
   console.log('El nuevo array de elementos es: ' + noDuplicates);
 
-
 };
 
 removeDuplicates(duplicates);
+
+
+// Iteración #7: Valores únicos -----------------------------------
+// Crea una función que reciba por parámetro un array y el valor que desea comprobar que existe 
+// dentro de dicho array - comprueba si existe el elemento, en caso que existan nos devuelve 
+// un true y la posición de dicho elemento y por la contra un false.
+
+const nameList = [
+  'Peter',
+  'Steve',
+  'Tony',
+  'Natasha',
+  'Clint',
+  'Logan',
+  'Xabier',
+  'Bruce',
+  'Peggy',
+  'Jessica',
+  'Marc'
+];
+
+let nameToCheck = prompt('Escribe el nombre que quieres comprobar; ');
+
+function nameFinder(array, name) {
+  
+  if (array.includes(name)) {
+
+    console.log(name, 'ya existe en el array y su posición es', array.indexOf(name));
+  } else {
+
+    console.log(name, 'no existe en el array');
+  }
+
+};
+
+nameFinder(nameList,nameToCheck);
+
+
+
