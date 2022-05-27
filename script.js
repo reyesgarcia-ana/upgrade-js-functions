@@ -21,7 +21,7 @@ function sum(numberOne , numberTwo) {
 
 const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Ejemplogrande2', 'Spiderman', 'Captain M.'];
 
-function findLongestWord(param) {
+function findLongestWord() {
   
   let maxLength=0;
   let longest;
@@ -124,3 +124,49 @@ function averageWord(param) {
 
 averageWord(mixedElements);
 
+// Iteración #6: Valores únicos -----------------------------------
+// Crea una función que reciba por parámetro un array y compruebe si existen elementos 
+//duplicados, en caso que existan los elimina para retornar un array sin los elementos duplicados
+
+const duplicates = [
+
+  'sushi',
+  'pizza',
+  'burger',
+  'potatoe',
+  'pasta',
+  'ice-cream',
+  'pizza',
+  'chicken',
+  'onion rings',
+  'pasta',
+  'soda'
+];
+
+
+function removeDuplicates(param) {
+  
+  let noDuplicates = [''];
+
+  for (i=0; i<(param.length); i++) {
+    
+    if (noDuplicates.indexOf(param[i]) === -1) {
+
+      noDuplicates.push(param[i]);
+
+    } 
+
+    else {
+
+      console.log(param[i], `es un elemento duplicado, se eliminará y no se añade al nuevo array`);
+      
+    }
+
+  };
+
+  console.log('El nuevo array de elementos es: ' + noDuplicates);
+
+
+};
+
+removeDuplicates(duplicates);
